@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('short_links', function (Blueprint $table) {
             $table->id();
-            $table->string("link");
-            $table->string("short_link");
-            $table->integer( "count");
+            $table->text("link");
+            $table->string("alias");
+            $table->integer( "count")->default(0);
             $table->timestamps();
         });
     }
